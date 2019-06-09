@@ -1,0 +1,25 @@
+
+.input-area{ 
+    width:300px;    
+    border-bottom: 1px solid #000000;
+    padding: 20px;   
+    margin: 20px;
+    display: flex;
+    flex-direction: column;   
+}
+
+.input{ 
+    margin: 5px;
+    margin-left: auto;   
+}
+
+.input-button{
+    width: 175px;
+    height: 25px;    
+    margin: 5px;
+    margin-left: auto;  
+}
+
+.color-block{
+    border: 1px solid #000000;
+}
