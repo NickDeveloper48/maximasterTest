@@ -2,7 +2,7 @@
 
 
 $(document).ready(function(){
-    $('.success_message').hide();
+   // $('.success_message').hide();
     let coords = null;
     ymaps.ready(init);
     function init(){ 
@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     $('.submit_button').on('click', ()=>{        
       
-        let nameVoid = new ValidateInfo(
+        let nameVoid = new ValidateRule(
             $('#input_name').val(), 
             (str)=>{                
                 if(str.length > 0)
@@ -55,7 +55,7 @@ $(document).ready(function(){
             'Поле ФИО обязательно для заполнения'
         );
 
-        let phoneVoid = new ValidateInfo(
+        let phoneVoid = new ValidateRule(
             $('#input_phone').val(), 
             (str)=>{                
                 if(str.length > 0)
@@ -71,7 +71,7 @@ $(document).ready(function(){
             'Поле Телефон обязательно для заполнения'
         );
 
-        let emailFormatError = new ValidateInfo(
+        let emailFormatError = new ValidateRule(
             $('#input_email').val(), 
             (str)=>{                
                 if(str.match(/@/))
@@ -87,7 +87,7 @@ $(document).ready(function(){
             'Неверный формат поля Email'
         );
 
-        let phoneFormatError = new ValidateInfo(
+        let phoneFormatError = new ValidateRule(
             $('.input_comment').val(), 
             (str)=>{                
                 if(str.length <= 500)
@@ -103,7 +103,7 @@ $(document).ready(function(){
             'Комментарий превысил 500 симвлов'
         );
 
-        let commentsTooBig = new ValidateInfo(
+        let commentsTooBig = new ValidateRule(
             $('#input_phone').val(), 
             (str)=>{                
                 if(!str.match(/\D/))
@@ -119,7 +119,7 @@ $(document).ready(function(){
             'Неверный формат номера телефона'
         );
 
-        let coordsNotNull = new ValidateInfo(
+        let coordsNotNull = new ValidateRule(
             coords, 
             (coords)=>{                               
                 if(coords != null){
@@ -137,29 +137,45 @@ $(document).ready(function(){
         
         
         let val = new validator(arr, 'Заказ оформлен!' );
-       
-        
-        $('.success_message').text(val.validate());
-        $('.success_message').show();
-      
+        let msgHelp = new msgHelper($('.success_message'));
+        msgHelp.Show(val.GetMsg(), val.GetStatus());
     });
 
 })
 
 
 
-class ValidateInfo{
-    constructor(source, func, successStr, failStr) {
-      
+class ValidateRule{
+    constructor(source, func, successStr, failStr) {      
       this.source = source;
       this.func = func;
       this.successStr = successStr;
       this.failStr = failStr;      
-    }
-  
-    check() {        
-        return this.func(this.source);       
-    }  
+    } 
+  }
+
+  class msgHelper{
+      constructor(control){
+          this.control = control;
+          this.successColor = '#008000';
+          this.failColor = '#FF0000';          
+      }
+
+      SetColors(successColor, failColor){
+        this.successColor = successColor;
+        this.failColor = failColor;
+      }
+
+      Show(message, success){
+          
+        if(success){
+            this.control.css('color', this.successColor);
+        }
+        else{
+            this.control.css('color', this.failColor);
+        }
+        this.control.text(message);        
+      }
   }
 
   class validator{
@@ -168,22 +184,34 @@ class ValidateInfo{
         this.successMsg = successMsg;
         this.errorMsg = '';
         this.success = false;
+        this.validate();
     }
-
-    
 
     validate(){ 
         this.errorMsg = '';       
         for(var i in this.arr) {
-            if(!this.arr[i].check()){
+            if(!this.arr[i].func(this.arr[i].source)){
                 this.errorMsg += this.arr[i].failStr + '; ';
             }       
         }
-        if(errorMsg != ''){
-            return errorMsg;
+        if(this.errorMsg != ''){
+            this.success = false;            
         }    
         else{
+            this.success = true;            
+        }
+    }
+
+    GetStatus(){
+        return this.success;
+    }
+
+    GetMsg(){
+        if(this.success){
             return this.successMsg;
+        }
+        else{
+            return this.errorMsg;
         }
     }
  }
