@@ -1,0 +1,29 @@
+form{
+    width: 330px;
+}
+
+#map{
+    width: 330px;
+    height: 150px;
+    margin: 10px 5px;
+    border: 1px solid #000000;
+}
+
+.input_data{
+    width: 330px;
+    margin: 5px;
+}
+
+.input_comment{
+    width: 330px;
+    height: 120px;
+    margin: 5px;
+    resize: none;
+}
+
+.submit_button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
