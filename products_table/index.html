@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        </script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="input_panel">
+            <span>Цена от:</span>
+            <input class="text_box" id ="price_from" type ="text" value="0">
+            <span>до:</span>
+            <input class="text_box" id ="price_to" type="text" value="100000">
+            <input class="refresh_button" type="button" value="Обновить">
+            <p class="input_error"></p>
+        </div>
+        <table class="products_table">
+            <tr class="table_header">
+              <th>ID</th>
+              <th>Название</th>
+              <th>Количество</th>
+              <th>Цена за единицу</th>
+              <th>Сумма</th>
+            </tr>            
+        </table>
+        <p class="error_message">Нет данных, попадающих под условие фильтра</p>
+        <!--<input class="testbtn" type="button" value="test">-->
+    </body>
+</html>

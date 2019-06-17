@@ -1,0 +1,26 @@
+.input_panel{
+    margin: 20px;
+}
+
+.text_box{  
+    width: 80px;
+}
+
+.input_error{
+    color: rgb(255, 0, 0);
+}
+
+.products_table{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+.products_table th{
+    background-color: #CCCCCC;
+}
+
+.products_table th, td{
+    height: 30px;
+    border-bottom: 1px solid #000000;
+    padding: 10px 5px;
+}
