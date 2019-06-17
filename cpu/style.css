@@ -1,6 +1,5 @@
 
-#myChart{
-    display: block;
-    width: 500px;
-    height: 500px;
+.chartContainer{
+    width: 800px;
+    height: 400px;
 }

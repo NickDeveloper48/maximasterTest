@@ -3,19 +3,14 @@
 const maximumDataPoints = 30;
 
 $(document).ready(()=>{
-    
-		var randomScalingFactor = function() {
-			return Math.round(Math.random() * 100);
-		};
-
+		
 		var config = {
 			type: 'line',
 			data: {
-				labels: [],
+				labels: new Array(maximumDataPoints),
 				datasets: [{
 					label: 'Загруженность CPU',					
-					data: [
-						randomScalingFactor()					
+					data: [										
                     ],
                     backgroundColor: 'rgba(255, 0, 0, 1)',
                     borderColor: 'rgba(255, 0, 0, 0.5)',
@@ -38,10 +33,15 @@ $(document).ready(()=>{
 				},
 				scales: {
 					xAxes: [{
-						display: true,
+						display: false,
 						scaleLabel: {
 							display: true,
 							labelString: 'T'
+                        },
+                        ticks: {
+							min: 0,
+							max: 100,							
+							stepSize: 5
 						}
 					}],
 					yAxes: [{
@@ -63,18 +63,18 @@ $(document).ready(()=>{
         var ctx = document.getElementById('myChart').getContext('2d');
         var myLine = new Chart(ctx, config);
         myLine.update();
-
+      
         const addData = (e)=> {
             if (config.data.datasets.length > 0) {
-               if(config.data.labels.length > maximumDataPoints){
+               if(config.data.datasets[0].data.length >= maximumDataPoints){
                  config.data.labels.shift();
-                 config.data.datasets.forEach(function(dataset) {
-                    dataset.data.shift()});                
+                 config.data.labels.push([]);
+                 config.data.datasets[0].data.shift();                               
                }                
-                config.data.labels.push('');        
-                config.data.datasets.forEach(function(dataset) {
+               config.data.datasets[0].data.push(e);       
+               /* config.data.datasets.forEach(function(dataset) {
                     dataset.data.push(e);
-                });
+                });*/
         
                 myLine.update();
             }
@@ -109,7 +109,7 @@ $(document).ready(()=>{
         }
         //console.log(getData);    
 
-    var timeID = setInterval(getData,5000);
+    var timeID = setInterval(getData,500);
     /*setTimeout(()=> {
         clearInterval(timeID);
         alert( 'стоп' );
