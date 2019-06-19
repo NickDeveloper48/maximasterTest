@@ -1,0 +1,46 @@
+body{
+    padding: 10px;
+}
+.user_message{
+    resize: none;
+}
+
+.posts_area{
+    width: 400px;   
+    padding: 10px 0px;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.post{    
+    border: 1px solid #000000;
+    padding: 5px;
+    margin:5px 0px;
+}
+
+.post_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_area{
+    width: 400px;   
+    margin: 10px 0px;
+}
+
+.user_name{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.user_message{
+    display: block;
+    margin-bottom: 10px;
+    width: inherit;
+    height: 90px;
+    box-sizing: border-box;
+}
+
+.send_button{
+    display: block;  
+    margin: auto;
+}

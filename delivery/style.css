@@ -1,0 +1,25 @@
+.submit_form{
+    display: inline-block;
+    width: 300px;
+}
+
+.city{
+    width:inherit;
+    margin: 10px 0px;;
+}
+
+.weight{
+    width:inherit;
+    margin: 10px 0px;;
+    box-sizing: border-box;
+}
+
+.submit_button{
+    width:100px;
+    display: block;
+    margin: 10px auto;
+}
+
+.error_message{
+    color: #FF0000;
+}
