@@ -2,10 +2,17 @@
 ADDING FONTS
 */
 @font-face{
-    font-family: 'Simplo Caps DEMO';        
-    src: url('../fonts/Simplo W90 Caps DEMO.ttf') format('truetype');     
-    font-weight: normal;    
-    font-style: normal;    
+    font-family: 'Simplo Caps DEMO';
+    src: url('../fonts/Simplo W90 Caps DEMO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Segoe WP';
+    src: url('../fonts/Segoe WP.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -13,14 +20,9 @@ body {
 }
 
 .container {
-    width: 1000px;
+    width: 996px;
     margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-        .container {
-            width: 740px;
-        }
+    padding: 0px;
 }
 
 
@@ -28,19 +30,19 @@ body {
     background-color: #f2f2f2;
 }
 
-.top-top-menu{
+.header-bar{
     margin: 0;
     background-color: #424242;
 }
 
-.top-top-menu_items{
+.header-bar_items{
     width: 32%;
     display: flex;
     justify-content: space-around;
     margin: 0px 0px 0px auto;
 }
 
-.top-top-menu_item{
+.header-bar_item{
     color: #ffffff;
     font-family: "Segoe WP";
     font-size: 15px;
@@ -52,14 +54,11 @@ body {
 .header-core{
     padding: 18px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
 }
 
 .logo{
-    height: 74px;
-    width: 136px;
     display: inline-flex;
 }
 
@@ -68,7 +67,7 @@ body {
     transform: rotate(-90deg);
     color: #5b5b5b;
     font-family: "Simplo Caps DEMO";
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
     display: inline;
@@ -76,43 +75,38 @@ body {
 }
 
 .search{
-    width: 458px;
-    padding: 4px 0;
+    padding: 4px;
     background-color: #79b260;
-    margin: 0px 52px 0px 43px;
+    /*margin: 0px 52px 0px 43px;*/
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .search_input {
-    width: 320px;
-    padding: 7px 0px;
     margin-right: 10px;
+    width: 328px;
 }
 
 .search_button{
     background-color: #79b260;
     border: none;
     color: #ffffff;
-    font-family: "Segoe WPN";
-    font-size: 18px;
+    font-family: "Segoe WP";
+    font-size: 23px;
     font-weight: 400;
-    margin-left: 5px;
-}
-
-.chart{
-    height: 70px;
-    width: 300px;
 }
 
 .cart{
+    display: flex;
+}
+
+.cart_main{
     border-right: 1px solid #dedede;
+    padding-right: 6px;
 }
 
 .cart_ref{
-    width: 147px;
-    height: 20px;
     color: #6d6d6d;
     font-family: "Segoe WP";
     font-size: 23px;
@@ -126,8 +120,6 @@ body {
 }
 
 .cart_value{
-    width: 79px;
-    height: 25px;
     color: #6d6d6d;
     font-family: "Segoe WP";
     font-size: 27px;
@@ -136,20 +128,24 @@ body {
 }
 
 .cart_checkout{
-    width: 81px;
-    height: 26px;
     background-color: #000000;
     color: #ffffff;
-    border: none;
+    font-family: "Segoe WP";
+    font-size: 15px;
+    font-weight: 400;
+    width: 87px;
+    height: 30px;
+    box-shadow: inset 1px 1px 0 rgba(118, 118, 118, 0.75);
+    border: 1px solid #232323;
 }
 
 .wish-list{
-
+    position: relative;
+    display: flex;
+    padding-left: 22px;
 }
 
 .wish-list_count{
-    width: 28px;
-    height: 16px;
     color: #ffffff;
     font-family: "Segoe WP";
     font-size: 13px;
@@ -157,43 +153,162 @@ body {
     background-color: #79b260;
     border-radius: 10px;
     text-align: center;
+    position: absolute;
+    left: 62px;
+    padding: 0px 6px;
 }
 
 .wish-list_title{
-    width: 77px;
-    height: 17px;
     color: #6d6d6d;
     font-family: "Segoe WP";
     font-size: 21px;
     font-weight: 400;
 }
 
-.top-menu{
-    height: 41px;
+.header-menu{
     background-color: #ffffff;
-    border-top: 1px solid #dedede;
-    border-bottom: 1px solid #dedede;
     display: flex;
     justify-content: center;
     align-items: stretch;
 }
 
-.top-menu_item{
+.header-menu_item{
     color: #5b5b5b;
-    font-family: "Segoe UI Symbol";
+    font-family: "Segoe WP";
     font-size: 19px;
     font-weight: 400;
     text-decoration: none;
     padding: 10px 13px 0px 13px;
 }
 
-.top-menu_item:hover {
+.header-menu_item:hover {
     color: #ffffff;
     background-color: #79b260;
 }
 
 .main-content{
-    background-color: aquamarine;
+    display: flex;
+}
+
+.banner-panel{
+    display: flex;
+    margin: 14px 0px;
+}
+
+#slider{
+    margin-right: 13px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 38px;
+    width: 38px;
+    outline: black;
+    /*background-size: 100%, 100%;*/
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon{
+
+    background-image: url("../images/left-button-logo.png");
+}
+.carousel-control-next-icon {
+
+    background-image: url("../images/right-button-logo.png");
+}
+
+.carousel-control-prev{
+    left: -15px;
+}
+
+.carousel-control-next{
+    right: -15px;
+}
+
+
+.left-menu{
+    border: 1px solid #d8dce0;
+    width: 19%;
+    padding: 10px;
+    margin-right: 8px;
+}
+.left-menu_header{
+    color: #6b6969;
+    font-family: "Segoe WP";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.left-menu_list{
+    list-style:none;
+    padding: 0px;
+
+}
+
+.list_header, .list_child{
+    text-decoration: none;
+    color: #696969;
+    font-family: "Segoe WP";
+    font-weight: 400;
+    line-height: 31.67px;
+}
+
+.list_header{
+    font-size: 17px;
+}
+
+.list_child{
+    font-size: 14px;
+    border-bottom: 1px solid #f1f2f3;
+}
+
+.tab-panel_ref, tab-panel_ref:hover, tab-panel_ref:active{
+    text-decoration: none;
+    display: block;
+}
+
+.tab-item, .tab-item:active, .tab-item:hover{
+    padding: 12px 22px;
+    border: 1px solid #d8dce0;
+    background-color: #efefef;
+    text-decoration: none;
+    color: #6b6969;
+    font-family: "Helvetica LT Std";
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.page-link{
+    color: #646464;
+    font-family: "Helvetica LT Std";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 0px 7px;
+    border: none;
+}
+
+.page-item > a{
+    text-decoration: none;
+}
+
+.page-item.active{
+    border-bottom: 4px solid #81bd66;
+    background-color: #ffffff;
+    color: #646464;
+    font-family: "Helvetica LT Std";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 0px 7px;
+    border: none;
+}
+
+#panel1{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer{
@@ -202,12 +317,26 @@ body {
 }
 
 .ref-table{
+    display: flex;
 }
 
 .cards{
     background-color: #332f2c;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #515154;
     height: 95px;
+    color: #dddddd;
+    font-family: "Segoe WP";
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.cards_icons{
+   
 }
 
 .privacy{

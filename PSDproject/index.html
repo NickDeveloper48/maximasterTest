@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="scripts/main.js"></script>
 </head>
 <body>
-    <div class="top-top-menu">
+    <div class="header-bar">
         <div class="container">
-            <div class="top-top-menu_items">
-                <a class="top-top-menu_item" href="#">Sign in</a>
-                <a class="top-top-menu_item" href="#">My Account</a>
-                <a class="top-top-menu_item" href="#">Order Status</a>
-                <a class="top-top-menu_item" href="#">Help</a>
+            <div class="header-bar_items">
+                <a class="header-bar_item" href="#">Sign in</a>
+                <a class="header-bar_item" href="#">My Account</a>
+                <a class="header-bar_item" href="#">Order Status</a>
+                <a class="header-bar_item" href="#">Help</a>
             </div>
         </div>
     </div>
@@ -21,16 +26,16 @@
         <div class="container">
             <div class="header-core">
                 <div class="logo">
-                    <img src="images/book-logo.png">
-                    <p class="logo_text">Online</p>
+                    <img src="images/books-logo-2.png">
+                    <!--<p class="logo_text">Online</p>-->
                 </div>
                 <div class="search">
                     <input class="search_input">
                     <img src="images/search-logo.png">
                     <button class="search_button">Search</button>
                 </div>
-                <div class="chart">
-                    <div class="cart">
+                <div class="cart">
+                    <div class="cart_main">
                         <div>
                             <img src="images/cart-logo.png">
                             <a class="cart_ref">Your cart</a>
@@ -56,73 +61,270 @@
             </div>
         </div>
     </div>
-    <div class="top-menu">
-        <a class="top-menu_item" href="#">Computers</a>
-        <a class="top-menu_item" href="#">Cooking</a>
-        <a class="top-menu_item" href="#">Education</a>
-        <a class="top-menu_item" href="#">Fiction</a>
-        <a class="top-menu_item" href="#">Health</a>
-        <a class="top-menu_item" href="#">Mathematics</a>
-        <a class="top-menu_item" href="#">Medical</a>
-        <a class="top-menu_item" href="#">Reference</a>
-        <a class="top-menu_item" href="#">Sience</a>
-    </div>
-    <div class="main-content">
-
-    </div>
-    <div class="footer">
-        <!--<div class="ref-table">
-        <table>
-            <tr>
-                <th>Biography & True Stories</th>
-                <th>Professional & Reference </th>
-                <th>Earth Sciences</th>
-                <th>Mathematics</th>
-            </tr>
-            <tr>
-                <td>General</td><td>Academic and Reference</td><td>Earth Sciences</td><td>Algebra</td>
-            </tr>
-            <tr>
-                <td>Diaries, Letters & Journals</td><td>Business Trade</td><td>Geography</td><td>Differential Equations</td>
-            </tr>
-            <tr>
-                <td>Memoirs</td><td>Engineering and Computer Science</td><td>The Environment</td><td>Discrete Mathematics</td>
-            </tr>
-            <tr>
-                <td>True Stories</td><td>Humanities, Social Sciences and Languages</td><td>Regional & Area Planning</td><td>Fourier Analysis</td>
-            </tr>
-            <tr>
-                <td>Generic Exams</td><td>Introduction to Computers</td><td>Fantasy</td><td>Numerical Analysis</td>
-            </tr>
-            <tr>
-                <td>GK Titles</td><td>Science and Maths</td><td>Gay</td><td>Probability</td>
-            </tr>
-            <tr>
-                <td>Medical Entrance</td><td>Trade Business</td><td>Humorous</td><td>Statistical Methods/data Analysis</td>
-            </tr>
-            <tr>
-                <td>Other Entrance Exams</td><td>English Language & Literature</td><td>Interactive</td><td>Stochastic And Random Processes</td>
-            </tr>
-            <tr>
-                <td>PG Entrance Examinations</td><td>English Language Teaching</td><td>Legal</td><td>Topology</td>
-            </tr>
-            <tr>
-                <td>Self-help Titles</td><td>Environment Awareness</td><td>Lesbian</td><td>Statistics</td>
-            </tr>
-            <tr>
-                <td>Sociology</td><td>Environment Protection</td><td>Men'S Adventure</td><td>Mathematics</td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="header-menu">
+            <a class="header-menu_item" href="#">Computers</a>
+            <a class="header-menu_item" href="#">Cooking</a>
+            <a class="header-menu_item" href="#">Education</a>
+            <a class="header-menu_item" href="#">Fiction</a>
+            <a class="header-menu_item" href="#">Health</a>
+            <a class="header-menu_item" href="#">Mathematics</a>
+            <a class="header-menu_item" href="#">Medical</a>
+            <a class="header-menu_item" href="#">Reference</a>
+            <a class="header-menu_item" href="#">Sience</a>
         </div>
-        <div class="cards">
-            <p>We accept all major Credit Card/Debit Card/Internet Banking</p>
-            <div>
-            <img src="images/mastercard_logo.png">
-            <img src="images/ae_logo.png">
-            <img src="images/visa_logo.png">
+    </div>
+    <div class="container">
+         <div class="banner-panel">
+            <div id="slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/slide-1.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/slide-2.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/slide-3.png" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="deal-of-the-month">
+                <img src="images/deal-of-the-month-logo.png">
             </div>
         </div>
-        <div class="privacy">Conditions of Use Privacy Notice © 2012-2013, Booksonline, Inc. or its affiliates</div>-->
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <div class="left-menu">
+                <span class="left-menu_header">Categories</span>
+                <ul class="left-menu_list">
+                    <li><a href="#"><span class="list_header">ALL</span></a></li>
+                    <li><a href="#"><span class="list_header">Fiction & Literature</span></a></li>
+                    <li><a href="#"><span class="list_child">Children</span></a></li>
+                    <li><a href="#"><span class="list_child">Science Fiction</span></a></li>
+                    <li><a href="#"><span class="list_child">Fantasy</span></a></li>
+                    <li><a href="#"><span class="list_child">Mystery</span></a></li>
+                    <li><a href="#"><span class="list_child">Romance</span></a></li>
+                    <li><a href="#"><span class="list_child">Horror</span></a></li>
+                    <li><a href="#"><span class="list_child">Poetry</span></a></li>
+                    <li><a href="#"><span class="list_child">Literature</span></a></li>
+                    <li><a href="#"><span class="list_child">Crime</span></a></li>
+                    <li><a href="#"><span class="list_header">Non-Fiction</span></a></li>
+                    <li><a href="#"><span class="list_child">Comic</span></a></li>
+                    <li><a href="#"><span class="list_child">Cook</span></a></li>
+                    <li><a href="#"><span class="list_child">Psychology</span></a></li>
+                    <li><a href="#"><span class="list_child">Medical</span></a></li>
+                    <li><a href="#"><span class="list_child">Photography</span></a></li>
+                    <li><a href="#"><span class="list_child">Law</span></a></li>
+                    <li><a href="#"><span class="list_child">History</span></a></li>
+                    <li><a href="#"><span class="list_child">Business</span></a></li>
+                    <li><a href="#"><span class="list_child">Computer</span></a></li>
+                    <li><a href="#"><span class="list_header">Other</span></a></li>
+                    <li><a href="#"><span class="list_child">Baby</span></a></li>
+                    <li><a href="#"><span class="list_child">Sex</span></a></li>
+                    <li><a href="#"><span class="list_child">Travel</span></a></li>
+                    <li><a href="#"><span class="list_child">Science</span></a></li>
+                    <li><a href="#"><span class="list_child">Sports</span></a></li>
+                </ul>
+            </div>
+            <div class="tab">
+                <div class="tab-panel">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a class="tab-panel_ref" data-toggle="tab" href="#panel1"><span class="tab-item">Best sellers</span></a></li>
+                        <li ><a class="tab-panel_ref" data-toggle="tab" href="#panel2"><span class="tab-item">New Arrivals</span></a></li>
+                        <li ><a class="tab-panel_ref" data-toggle="tab" href="#panel2"><span class="tab-item">Used Books</span></a></li>
+                        <li ><a class="tab-panel_ref" data-toggle="tab" href="#panel2"><span class="tab-item">Special Offers</span></a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="panel1" class="tab-pane fade in active">
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-item_special"></div>
+                            <img src="images/war-of-art-book.png">
+                            <div class="book-item_name">the war of art</div>
+                            <div class="book-item_price">$60</div>
+                        </div>
+                    </div>
+                    <div id="panel2" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+                        <p>Some content in menu 1.</p>
+                    </div>
+                    <div id="panel3" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                    <div id="panel4" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item"><a href="#"><span class="page-link">1</span></a></li>
+                        <li class="page-item"><a href="#"><span class="page-link">2</span></a></li>
+                        <li class="page-item active"><a href="#"><span class="page-link">3</span></a></li>
+                        <li class="page-item"><a href="#"><span class="page-link">4</span></a></li>
+                        <li class="page-item"><a href="#"><span class="page-link">5</span></a></li>
+                        <li class="page-item"><a href="#"><span class="page-link">6</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="ref-table">
+                <div>
+                    <ul>
+                        <li>Biography & True Stories</li>
+                        <li>General</li>
+                        <li>Diaries, Letters & Journals</li>
+                        <li>Memoirs</li>
+                        <li>True Stories</li>
+                        <li>Generic Exams</li>
+                        <li>GK Titles</li>
+                        <li>Medical Entrance</li>
+                        <li>Other Entrance Exams</li>
+                        <li>PG Entrance Examinations</li>
+                        <li>Self-help Titles</li>
+                        <li>Sociology</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Professional & Reference </li>
+                        <li>Academic and Reference</li>
+                        <li>Business Trade</li>
+                        <li>Engineering and Computer Science</li>
+                        <li>Humanities, Social Sciences and Languages</li>
+                        <li>Introduction to Computers</li>
+                        <li>Science and Maths</li>
+                        <li>English Language & Literature</li>
+                        <li>English Language Teaching</li>
+                        <li>Environment Awareness</li>
+                        <li>Environment Protection</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Earth Sciences</li>
+                        <li>Geography</li>
+                        <li>The Environment</li>
+                        <li>Regional & Area Planning</li>
+                        <li>Gay</li>
+                        <li>Humorous</li>
+                        <li>Interactive</li>
+                        <li>Legal</li>
+                        <li>English Language Teaching</li>
+                        <li>Lesbian</li>
+                        <li>Men'S Adventure</li>
+                        <li>Movie Or Television Tie-In</li>
+                        <li>Mystery & Detective</li>
+                        <li>Political</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Mathematics</li>
+                        <li>Algebra</li>
+                        <li>Differential Equations</li>
+                        <li>Discrete Mathematics</li>
+                        <li>Fourier Analysis</li>
+                        <li>Numerical Analysis</li>
+                        <li>Statistical Methods/data Analysis</li>
+                        <li>Stochastic And Random Processes</li>
+                        <li>Topology</li>
+                        <li>Statistics</li>
+                        <li>Mathematics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cards">
+                <p>We accept all major Credit Card/Debit Card/Internet Banking</p>
+                <div class="cards_icons">
+                    <img src="images/mastercard_logo.png">
+                    <img src="images/ae_logo.png">
+                    <img src="images/visa_logo.png">
+                </div>
+            </div>
+            <div class="privacy">Conditions of Use Privacy Notice © 2012-2013, Booksonline, Inc. or its affiliates</div>
+         </div>
     </div>
 </body>
 </html>
