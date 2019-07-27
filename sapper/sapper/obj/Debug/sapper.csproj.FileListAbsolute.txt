@@ -1,0 +1,2 @@
+c:\users\nick\documents\visual studio 2015\Projects\sapper\sapper\bin\Debug\sapper.exe.config
+D:\maximaster\test\sapper\sapper\bin\Debug\sapper.exe.config
